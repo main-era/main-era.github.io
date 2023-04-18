@@ -218,3 +218,39 @@
     50% { width: 100%; transform: scale(1.25,1.1) skewX(-15deg) translateY(-2px) translateZ(-30px); }
     100% { width: 100%; transform: scale(1.25,1) skewX(20deg) translateY(3px) rotateX(-40deg) rotateY(-10deg) rotateZ(-15deg); }
   }
+
+  
+    @media screen and (max-width: 1300px) {
+      .pos0 {
+        transform: translate(-175px, -140px);
+      }
+    
+      .pos1 {
+        transform: translate(-175px, -40px);
+      }
+    
+      .pos2 {
+        transform: translate(-175px, 45px);
+      }
+    
+      .pos3 {
+        transform: translate(-175px, 140px);
+      }
+    
+    
+      .pos4 {
+        transform: translate(50px, -140px);
+      }
+    
+      .pos5 {
+        transform: translate(50px, -45px);
+      }
+    
+      .pos6 {
+        transform: translate(50px, 40px);
+      }
+    
+      .pos7 {
+        transform: translate(50px, 140px);
+      }
+    }
