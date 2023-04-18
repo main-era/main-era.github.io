@@ -221,6 +221,11 @@
 
   
     @media screen and (max-width: 1300px) {
+
+      .tape-recorder {
+        background: url("assets/tape recorder/tape recorder - unpressed hover.png");
+      }
+
       .pos0 {
         transform: translate(-170px, -140px);
       }
