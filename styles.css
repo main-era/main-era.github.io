@@ -8,6 +8,7 @@
   body {
     margin: 0;
     padding: 0;
+    overflow: hidden;
   }
 
   #title {
@@ -256,7 +257,7 @@
       }
     
       .pos6 {
-        transform: translate(135px, 40px) scale(0.9);
+        transform: translate(130px, 40px) scale(0.85);
       }
     
       .pos7 {
