@@ -1,0 +1,215 @@
+* {
+    font-family: 'Space Mono', monospace;
+    font-weight: bold;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  #title {
+    position: absolute;
+    top: -165px;
+  }
+
+  #title img {
+    width: 30%;
+    filter: invert(1);
+    transform: translate(-10px, 0px);
+    animation: floating 6s infinite linear;
+  }
+
+  .centered {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 30%;
+    text-align: center;
+  }
+
+  .tape-recorder {
+    z-index: 4;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    height: 250px;
+    background: url("assets/tape recorder/tape recorder - unpressed.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat:  no-repeat;
+    border: none;
+  }
+
+  .tape-recorder:not(.pressed):hover {
+    background: url("assets/tape recorder/tape recorder - unpressed hover.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat:  no-repeat;
+  }
+
+  .pressed {
+    background: url("assets/tape recorder/tape recorder - pressed.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat:  no-repeat;
+  }
+
+  .pressed:hover {
+    background: url("assets/tape recorder/tape recorder - pressed hover.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat:  no-repeat;
+  }
+
+  .tape-recorder button {
+    z-index: 3;
+    opacity: 0;
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    left: 100px;
+    bottom: 65px;
+  }
+
+  .tape-recorder button:hover {
+    cursor: pointer;
+  }
+
+  .links {
+    position: absolute;
+    top: 120px;
+    left: 45%;
+    transition: transform 0.5s ease-out, scale 0.2s ease-out;
+    height: 75px;
+    user-select: none;
+  }
+
+  .links a {
+    cursor: default;
+  }
+
+  .links img {
+    z-index: 2;
+    position: relative;
+    top: -75px;
+    width: 75px;
+  }
+
+  .links:hover > a .shape-wrapper {
+    opacity: 1;
+  }
+
+  .links:hover > a .shape-wrapper .shape {
+    animation: jelly infinite;
+  }
+
+  .links:hover > a .shape-wrapper .cyan-fill {
+    transform: scale(3,.1);
+    animation-delay: 0.05s;
+    animation-duration: .4s;
+  }
+
+  .links:hover > a .shape-wrapper .red-fill {
+    animation-duration: .45s;
+    animation-delay: 0.08s;
+  }
+
+  .links:nth-child(odd):hover img {
+    animation: tiltBounceAlt .15s ease;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+  }
+
+  .links:nth-child(even):hover img:hover {
+    animation: tiltBounce .15s ease;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+  }
+
+  .shape-wrapper {
+    opacity: 0;
+    position: relative;
+    top: 20px
+  }
+
+  .shape-wrapper .cyan-fill {
+    mix-blend-mode: screen;
+    position: relative;
+    top: -30px;
+  }
+
+  .pos0 {
+    transform: translate(-225px, -140px);
+  }
+
+  .pos1 {
+    transform: translate(-225px, -40px);
+  }
+
+  .pos2 {
+    transform: translate(-225px, 45px);
+  }
+
+  .pos3 {
+    transform: translate(-225px, 140px);
+  }
+
+
+  .pos4 {
+    transform: translate(250px, -140px);
+  }
+
+  .pos5 {
+    transform: translate(250px, -45px);
+  }
+
+  .pos6 {
+    transform: translate(250px, 40px);
+  }
+
+  .pos7 {
+    transform: translate(250px, 140px);
+  }
+  
+  @keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 10px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+@keyframes tiltBounce {
+    0% {
+      transform: scale(1) rotate(-7deg);
+    }
+    50% {
+      transform: scale(1.5) rotate(-7deg);
+    }
+    100% {
+      transform: scale(1.15) rotate(-7deg);
+    }
+  }
+
+  @keyframes tiltBounceAlt {
+    0% {
+      transform: scale(1) rotate(7deg);
+    }
+    50% {
+      transform: scale(1.5) rotate(7deg);
+    }
+    100% {
+      transform: scale(1.15) rotate(7deg);
+    }
+  }
+
+  @keyframes jelly {
+    0% {
+      width: 100%; transform: scale(1.25,1) skewX(20deg) translateY(3px) rotateX(40deg) rotateY(10deg) rotateZ(-10deg);
+    }
+    50% { width: 100%; transform: scale(1.25,1.1) skewX(-15deg) translateY(-2px) translateZ(-30px); }
+    100% { width: 100%; transform: scale(1.25,1) skewX(20deg) translateY(3px) rotateX(-40deg) rotateY(-10deg) rotateZ(-15deg); }
+  }
