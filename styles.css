@@ -225,6 +225,9 @@
 
       .tape-recorder {
         background: url("assets/tape recorder/tape recorder - unpressed hover.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat:  no-repeat;
       }
 
       .pos0 {
