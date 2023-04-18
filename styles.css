@@ -24,6 +24,10 @@
     user-select: none;
   }
 
+  #loader {
+    display: none;
+  }
+
   .centered {
     position: fixed;
     width: 100%;
@@ -151,36 +155,36 @@
   }
 
   .pos0 {
-    transform: translate(-200px, -140px);
+    transform: translate(-190px, -140px);
   }
 
   .pos1 {
-    transform: translate(-200px, -40px);
+    transform: translate(-225px, -40px);
   }
 
   .pos2 {
-    transform: translate(-200px, 45px);
+    transform: translate(-225px, 45px);
   }
 
   .pos3 {
-    transform: translate(-200px, 140px);
+    transform: translate(-190px, 140px);
   }
 
 
   .pos4 {
-    transform: translate(250px, -140px);
+    transform: translate(240px, -140px);
   }
 
   .pos5 {
-    transform: translate(250px, -45px);
+    transform: translate(275px, -45px);
   }
 
   .pos6 {
-    transform: translate(250px, 40px);
+    transform: translate(275px, 40px);
   }
 
   .pos7 {
-    transform: translate(250px, 140px);
+    transform: translate(240px, 140px);
   }
   
   @keyframes floating {
