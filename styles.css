@@ -231,35 +231,35 @@
       }
 
       .pos0 {
-        transform: translate(-170px, -140px);
+        transform: translate(-160px, -140px);
       }
     
       .pos1 {
-        transform: translate(-170px, -40px);
+        transform: translate(-160px, -40px);
       }
     
       .pos2 {
-        transform: translate(-170px, 45px);
+        transform: translate(-160px, 45px);
       }
     
       .pos3 {
-        transform: translate(-170px, 140px);
+        transform: translate(-160px, 140px);
       }
     
     
       .pos4 {
-        transform: translate(75px, -140px);
+        transform: translate(125px, -140px);
       }
     
       .pos5 {
-        transform: translate(75px, -45px);
+        transform: translate(125px, -45px);
       }
     
       .pos6 {
-        transform: translate(75px, 40px);
+        transform: translate(125px, 40px);
       }
     
       .pos7 {
-        transform: translate(75px, 140px);
+        transform: translate(125px, 140px);
       }
     }
