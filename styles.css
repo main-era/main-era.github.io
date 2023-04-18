@@ -249,11 +249,11 @@
     
     
       .pos4 {
-        transform: translate(125px, -140px);
+        transform: translate(130px, -140px);
       }
     
       .pos5 {
-        transform: translate(125px, -45px);
+        transform: translate(130px, -45px);
       }
     
       .pos6 {
@@ -261,6 +261,6 @@
       }
     
       .pos7 {
-        transform: translate(125px, 140px);
+        transform: translate(130px, 140px);
       }
     }
