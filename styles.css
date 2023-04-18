@@ -144,19 +144,19 @@
   }
 
   .pos0 {
-    transform: translate(-225px, -140px);
+    transform: translate(-200px, -140px);
   }
 
   .pos1 {
-    transform: translate(-225px, -40px);
+    transform: translate(-200px, -40px);
   }
 
   .pos2 {
-    transform: translate(-225px, 45px);
+    transform: translate(-200px, 45px);
   }
 
   .pos3 {
-    transform: translate(-225px, 140px);
+    transform: translate(-200px, 140px);
   }
 
 
