@@ -105,6 +105,8 @@
   }
 
   .links a {
+    display: inline-block;
+    height: 75px;
     cursor: default;
   }
 
