@@ -11,6 +11,16 @@
     overflow: hidden;
   }
 
+  #wallpaper {
+    background: url("assets/scribble.png");
+    background-size: auto;
+    background-position: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    filter: invert(2);
+  }
+
   #title {
     position: absolute;
     top: -165px;
