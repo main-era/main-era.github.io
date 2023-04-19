@@ -228,6 +228,10 @@
   
     @media screen and (max-width: 1300px) {
 
+      #title {
+        width: 60%;
+      }
+
       .tape-recorder {
         background: url("assets/tape recorder/tape recorder - unpressed hover.png");
         background-size: contain;
