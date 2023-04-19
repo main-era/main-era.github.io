@@ -241,6 +241,10 @@
   
     @media screen and (max-width: 1300px) {
 
+      #wallpaper {
+        animation: slideshow 2s infinite linear;
+      }
+
       #title {
         width: 800px;
         position: absolute;
