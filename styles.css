@@ -240,7 +240,7 @@
     @media screen and (max-width: 1300px) {
 
       #title {
-        width: 60%;
+        width: 80vw;
       }
 
       .tape-recorder {
@@ -251,11 +251,11 @@
       }
 
       .pos0 {
-        transform: translate(-160px, -140px);
+        transform: translate(-160px, -160px);
       }
     
       .pos1 {
-        transform: translate(-160px, -40px);
+        transform: translate(-160px, -50px);
       }
     
       .pos2 {
@@ -263,16 +263,16 @@
       }
     
       .pos3 {
-        transform: translate(-160px, 140px);
+        transform: translate(-160px, 150px);
       }
     
     
       .pos4 {
-        transform: translate(130px, -140px);
+        transform: translate(130px, -160px);
       }
     
       .pos5 {
-        transform: translate(130px, -45px);
+        transform: translate(130px, -55px);
       }
     
       .pos6 {
@@ -280,6 +280,6 @@
       }
     
       .pos7 {
-        transform: translate(130px, 140px);
+        transform: translate(130px, 150px);
       }
     }
