@@ -27,9 +27,8 @@
   #title img {
     position: relative;
     width: 40%;
-    top: -100px;
+    top: -90px;
     filter: invert(1);
-    animation: floating 6s infinite linear;
     user-select: none;
   }
 
@@ -196,12 +195,6 @@
 
   .pos7 {
     transform: translate(240px, 160px);
-  }
-  
-  @keyframes floating {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 10px); }
-    100%   { transform: translate(0, -0px); }   
   }
 
   @keyframes tiltBounce {
