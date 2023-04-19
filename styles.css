@@ -242,10 +242,10 @@
     @media screen and (max-width: 1300px) {
 
       #title {
-        width: 750px;
+        width: 800px;
         position: absolute;
         top: -100px;
-        left: -167.5px;
+        left: -200px;
       }
 
       .tape-recorder {
