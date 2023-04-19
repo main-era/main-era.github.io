@@ -287,4 +287,13 @@
       .pos7 {
         transform: translate(130px, 150px);
       }
+
+      @keyframes slideshow {
+        0% { background: center / auto no-repeat url("assets/background0.png"); }
+        20% { background: center / auto no-repeat url("assets/background1.png"); }
+        40% { background: center / auto no-repeat url("assets/background2.png"); }
+        60% { background: center / auto no-repeat url("assets/background3.png"); }
+        80% { background: center / auto no-repeat url("assets/background4.png"); }
+        100% { background: center / auto no-repeat url("assets/background0.png"); }
+      }
     }
