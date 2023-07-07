@@ -260,18 +260,18 @@ polygon {
     
     
       .pos4 {
-        transform: translate(85px, -100px);
+        transform: translate(80px, -100px);
       }
     
       .pos5 {
-        transform: translate(125px, 25px);
+        transform: translate(120px, 25px);
       }
     
       .pos6 {
-        transform: translate(125px, 150px) scale(0.85);
+        transform: translate(120px, 150px) scale(0.85);
       }
     
       .pos7 {
-        transform: translate(85px, 275px);
+        transform: translate(80px, 275px);
       }
 }
