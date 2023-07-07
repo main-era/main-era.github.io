@@ -128,6 +128,10 @@ body {
   width: 75px;
 }
 
+.links:hover {
+  cursor: pointer;
+}
+
 .links:hover .shape-wrapper {
   opacity: 1;
 }
@@ -145,6 +149,19 @@ body {
 .links:hover .shape-wrapper .red-fill {
   animation-duration: 0.45s;
   animation-delay: 0.08s;
+}
+
+.links:nth-child(odd):hover img {
+  animation: tiltBounceAlt .15s ease;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+  transform: scale(1.25, 1) skewX(20deg) translateY(3px) rotateX(40deg) rotateY(10deg) rotateZ(-10deg);
+}
+
+.links:nth-child(even):hover img:hover {
+  animation: tiltBounce .15s ease;
+  animation-fill-mode: forwards;
+  cursor: pointer;
 }
 
 polygon {
