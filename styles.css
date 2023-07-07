@@ -1,276 +1,277 @@
 * {
-    font-family: 'Space Mono', monospace;
-    font-weight: bold;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
+  font-family: 'Space Mono', monospace;
+  font-weight: bold;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
-  #wallpaper {
-    position: fixed;
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#wallpaper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  filter: invert(2);
+  background: center / cover no-repeat url("assets/background.gif");
+}
+
+#title {
+  position: absolute;
+  width: 100%;
+  top: -35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#title img {
+  width: 40vw;
+  max-width: 700px;
+  max-height: 300px;
+  min-width: 400px;
+  min-height: 170px;
+  filter: invert(1);
+  user-select: none;
+}
+
+#loader {
+  display: none;
+}
+
+.centered {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 40%;
+  text-align: center;
+}
+
+.tape-recorder {
+  z-index: 4;
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  height: 250px;
+  background: url("assets/tape recorder/tape recorder - unpressed.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat:  no-repeat;
+  border: none;
+}
+
+.tape-recorder:not(.pressed):hover {
+  background: url("assets/tape recorder/tape recorder - unpressed hover.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat:  no-repeat;
+}
+
+.pressed {
+  background: url("assets/tape recorder/tape recorder - pressed.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat:  no-repeat;
+}
+
+.pressed:hover {
+  background: url("assets/tape recorder/tape recorder - pressed hover.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat:  no-repeat;
+}
+
+.tape-recorder button {
+  z-index: 3;
+  opacity: 0;
+  width: 20px;
+  height: 30px;
+  position: absolute;
+  left: 100px;
+  bottom: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tape-recorder button:hover {
+  cursor: pointer;
+}
+
+.links {
+  width: 75px;
+  height: 75px;
+  transition: transform 0.5s ease-out, scale 0.2s ease-out;
+  user-select: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50px, 100px);
+}
+
+.links a {
+  display: inline-block;
+  width: fit-content;
+  height: 75px;
+  cursor: default;
+}
+
+.links img {
+  z-index: 2;
+  position: relative;
+  top: -75px;
+  width: 75px;
+}
+
+.links:hover .shape-wrapper {
+  opacity: 1;
+}
+
+.links:hover .shape-wrapper .shape {
+  animation: jelly infinite;
+}
+
+.links:hover .shape-wrapper .cyan-fill {
+  transform: scale(3, .1);
+  animation-delay: 0.05s;
+  animation-duration: 0.4s;
+}
+
+.links:hover .shape-wrapper .red-fill {
+  animation-duration: 0.45s;
+  animation-delay: 0.08s;
+}
+
+polygon {
+  max-height: 50px;
+}
+
+.red-fill svg {
+  transform: translateY(50px);
+  z-index: 2;
+}
+
+.cyan-fill svg {
+  transform: translateY(25px);
+  z-index: 1;
+}
+
+.shape-wrapper {
+  width: 75px;
+  height: 75px;
+  opacity: 0;
+  position: relative;
+}
+
+.pos0 {
+  transform: translate(-270px, -100px);
+}
+
+.pos1 {
+  transform: translate(-300px, 20px);
+}
+
+.pos2 {
+  transform: translate(-300px, 130px);
+}
+
+.pos3 {
+  transform: translate(-260px, 240px);
+}
+
+.pos4 {
+  transform: translate(190px, -100px);
+}
+
+.pos5 {
+  transform: translate(225px, 20px);
+}
+
+.pos6 {
+  transform: translate(225px, 130px);
+}
+
+.pos7 {
+  transform: translate(190px, 240px);
+}
+
+
+@keyframes tiltBounce {
+  0% {
+    transform: scale(1) rotate(-7deg);
+  }
+  50% {
+    transform: scale(1.5) rotate(-7deg);
+  }
+  100% {
+    transform: scale(1.15) rotate(-7deg);
+  }
+}
+
+@keyframes tiltBounceAlt {
+  0% {
+    transform: scale(1) rotate(7deg);
+  }
+  50% {
+    transform: scale(1.5) rotate(7deg);
+  }
+  100% {
+    transform: scale(1.15) rotate(7deg);
+  }
+}
+
+@keyframes jelly {
+  0% {
     width: 100%;
-    height: 100%;
-    filter: invert(2);
-    background: center / cover no-repeat url("assets/background.gif");
+    transform: scale(1.25, 1) skewX(20deg) translateY(3px) rotateX(40deg) rotateY(10deg) rotateZ(-10deg);
   }
-
-  #title {
-    position: absolute;
-    top: -165px;
-  }
-
-  #title img {
-    position: relative;
-    width: 40%;
-    top: -90px;
-    filter: invert(1);
-    user-select: none;
-  }
-
-  #loader {
-    display: none;
-  }
-
-  .centered {
-    position: fixed;
+  50% {
     width: 100%;
-    height: 100%;
-    top: 40%;
-    text-align: center;
+    transform: scale(1.25, 1.1) skewX(-15deg) translateY(-2px) translateZ(-30px);
   }
+  100% {
+    width: 100%;
+    transform: scale(1.25, 1) skewX(20deg) translateY(3px) rotateX(-40deg) rotateY(-10deg) rotateZ(-15deg);
+  }
+}
 
-  .tape-recorder {
-    z-index: 4;
-    display: inline-block;
-    position: relative;
-    margin: 0;
-    padding: 0;
-    width: 250px;
-    height: 250px;
-    background: url("assets/tape recorder/tape recorder - unpressed.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat:  no-repeat;
-    border: none;
-  }
-
-  .tape-recorder:not(.pressed):hover {
-    background: url("assets/tape recorder/tape recorder - unpressed hover.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat:  no-repeat;
-  }
-
-  .pressed {
-    background: url("assets/tape recorder/tape recorder - pressed.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat:  no-repeat;
-  }
-
-  .pressed:hover {
-    background: url("assets/tape recorder/tape recorder - pressed hover.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat:  no-repeat;
-  }
-
-  .tape-recorder button {
-    z-index: 3;
-    opacity: 0;
-    width: 20px;
-    height: 30px;
-    position: absolute;
-    left: 100px;
-    bottom: 65px;
-  }
-
-  .tape-recorder button:hover {
-    cursor: pointer;
-  }
-
-  .links {
-    position: absolute;
-    top: 120px;
-    left: 45%;
-    transition: transform 0.5s ease-out, scale 0.2s ease-out;
-    height: 75px;
-    user-select: none;
-  }
-
-  .links a {
-    display: inline-block;
-    height: 75px;
-    cursor: default;
-  }
-
-  .links img {
-    z-index: 2;
-    position: relative;
-    top: -75px;
-    width: 75px;
-  }
-
-  .links:hover .shape-wrapper {
-    opacity: 1;
-  }
-
-  .links:hover .shape-wrapper .shape {
-    animation: jelly infinite;
-  }
-
-  .links:hover .shape-wrapper .cyan-fill {
-    transform: scale(3,.1);
-    animation-delay: 0.05s;
-    animation-duration: .4s;
-  }
-
-  .links:hover .shape-wrapper .red-fill {
-    animation-duration: .45s;
-    animation-delay: 0.08s;
-  }
-
-  .links:nth-child(odd):hover img {
-    animation: tiltBounceAlt .15s ease;
-    animation-fill-mode: forwards;
-    cursor: pointer;
-  }
-
-  .links:nth-child(even):hover img:hover {
-    animation: tiltBounce .15s ease;
-    animation-fill-mode: forwards;
-    cursor: pointer;
-  }
-
-  .shape-wrapper {
-    opacity: 0;
-    position: relative;
-  }
-
-  .shape-wrapper .red-fill {
-    mix-blend-mode: screen;
-    position: relative;
-    top: 15px;
-  }
-
-  .shape-wrapper .cyan-fill {
-    mix-blend-mode: screen;
-    position: relative;
-    top: -15px;
-  }
+@media screen and (max-width: 480px) {
 
   .pos0 {
-    transform: translate(-190px, -170px);
-  }
-
-  .pos1 {
-    transform: translate(-225px, -55px);
-  }
-
-  .pos2 {
-    transform: translate(-225px, 50px);
-  }
-
-  .pos3 {
-    transform: translate(-190px, 160px);
-  }
-
-
-  .pos4 {
-    transform: translate(240px, -170px);
-  }
-
-  .pos5 {
-    transform: translate(275px, -55px);
-  }
-
-  .pos6 {
-    transform: translate(275px, 50px);
-  }
-
-  .pos7 {
-    transform: translate(240px, 160px);
-  }
-
-  @keyframes tiltBounce {
-    0% { transform: scale(1) rotate(-7deg); }
-    50% { transform: scale(1.5) rotate(-7deg); }
-    100% { transform: scale(1.15) rotate(-7deg); }
-  }
-
-  @keyframes tiltBounceAlt {
-    0% { transform: scale(1) rotate(7deg); }
-    50% { transform: scale(1.5) rotate(7deg); }
-    100% { transform: scale(1.15) rotate(7deg); }
-  }
-
-  @keyframes jelly {
-    0% {
-      width: 100%; 
-      transform: scale(1.25,1) skewX(20deg) translateY(3px) rotateX(40deg) rotateY(10deg) rotateZ(-10deg);
-    }
-    50% { 
-      width: 100%; 
-      transform: scale(1.25,1.1) skewX(-15deg) translateY(-2px) translateZ(-30px); 
-    }
-    100% { 
-      width: 100%; 
-      transform: scale(1.25,1) skewX(20deg) translateY(3px) rotateX(-40deg) rotateY(-10deg) rotateZ(-15deg); 
-    }
-  }
-
-  
-    @media screen and (max-width: 1300px) {
-
-      #title {
-        width: 800px;
-        position: absolute;
-        top: -100px;
-        left: -200px;
-      }
-
-      .tape-recorder {
-        background: url("assets/tape recorder/tape recorder - unpressed hover.png");
-        background-size: contain;
-        background-position: center;
-        background-repeat:  no-repeat;
-      }
-
-      .pos0 {
-        transform: translate(-160px, -160px);
+        transform: translate(-150px, -100px);
       }
     
       .pos1 {
-        transform: translate(-160px, -50px);
+        transform: translate(-190px, 25px);
       }
     
       .pos2 {
-        transform: translate(-160px, 45px);
+        transform: translate(-190px, 150px);
       }
     
       .pos3 {
-        transform: translate(-160px, 150px);
+        transform: translate(-150px, 275px);
       }
     
     
       .pos4 {
-        transform: translate(130px, -160px);
+        transform: translate(85px, -100px);
       }
     
       .pos5 {
-        transform: translate(130px, -55px);
+        transform: translate(125px, 25px);
       }
     
       .pos6 {
-        transform: translate(130px, 40px) scale(0.85);
+        transform: translate(125px, 150px) scale(0.85);
       }
     
       .pos7 {
-        transform: translate(130px, 150px);
+        transform: translate(85px, 275px);
       }
-    }
+}
