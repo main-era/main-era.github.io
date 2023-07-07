@@ -169,35 +169,35 @@ polygon {
 }
 
 .pos0 {
-  transform: translate(-270px, -100px);
+  transform: translate(-270px, -80px);
 }
 
 .pos1 {
-  transform: translate(-300px, 20px);
+  transform: translate(-300px, 30px);
 }
 
 .pos2 {
-  transform: translate(-300px, 130px);
+  transform: translate(-300px, 150px);
 }
 
 .pos3 {
-  transform: translate(-260px, 240px);
+  transform: translate(-260px, 260px);
 }
 
 .pos4 {
-  transform: translate(190px, -100px);
+  transform: translate(190px, -80px);
 }
 
 .pos5 {
-  transform: translate(225px, 20px);
+  transform: translate(225px, 30px);
 }
 
 .pos6 {
-  transform: translate(225px, 130px);
+  transform: translate(225px, 150px);
 }
 
 .pos7 {
-  transform: translate(190px, 240px);
+  transform: translate(190px, 260px);
 }
 
 
